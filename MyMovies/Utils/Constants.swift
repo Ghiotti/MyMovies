@@ -16,9 +16,11 @@ struct Constants {
 
     struct Plist {
         static let baseUrlKey = "BaseUrl"
+        static let imagesBaseUrl = "ImagesBaseUrl"
     }
 
     struct Endpoints {
+        static let mostPopularsMovies = "movie/popular"
     }
         
     struct ReuseIdentifiers {

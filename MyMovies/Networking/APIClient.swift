@@ -39,8 +39,10 @@ class APICLient {
             urlString = environment.path(endpoint)
         }
         
-        let params = parameters ?? [:]
-
+        var params = parameters ?? [:]
+        params["api_key"] = "772f60894f0adc5bf57b9bd1dd476fb8"
+        var headers = HTTPHeaders()
+        
         debugPrint(urlString)
         let request = AF.request(urlString, method: method, parameters: params, encoding: encoding)
             .responseString { response in

@@ -15,7 +15,7 @@ final class TabBarViewModel: BaseViewModel {
     // MARK: Init
     
     init(coordinator: SceneCoordinatorType?) {
-        self.homeViewModel = HomeViewModel(coordinator: coordinator)
+        self.homeViewModel = HomeViewModel(coordinator: coordinator, movieService: NetworkManager())
         self.favoriteViewModel = FavoriteMoviesViewModel(coordinator: coordinator)
         super.init(coordinator: coordinator)
     }

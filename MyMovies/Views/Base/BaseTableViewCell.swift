@@ -11,7 +11,7 @@ import ReactiveKit
 class BaseTableViewCell: UITableViewCell {
 
     lazy var disposeBag = DisposeBag()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
