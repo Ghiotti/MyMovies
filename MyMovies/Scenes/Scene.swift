@@ -13,4 +13,6 @@ import MediaPlayer
 /// These two components show always go hand-in-hand.
 enum Scene {
     
+    /// Onboarding Flow
+    case splash(SplashViewModel)
 }

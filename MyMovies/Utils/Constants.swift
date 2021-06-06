@@ -24,6 +24,10 @@ struct Constants {
     struct ReuseIdentifiers {
     }
     
+    struct Lottie {
+        static let splash = "SplashLottieAnimation"
+    }
+    
     static let defaultCornerRadius: Float = 5
     static let defaultAnimationDuration = 0.3
 }

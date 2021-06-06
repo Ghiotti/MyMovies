@@ -24,7 +24,7 @@ final class NavigationViewController: UINavigationController {
         //navigationBar.backIndicatorImage = CommonAssets.backIcon.image
         //navigationBar.backIndicatorTransitionMaskImage = CommonAssets.backIcon.image
         navigationBar.tintColor = .white
-        navigationBar.barTintColor = .primaryBlue
+        navigationBar.barTintColor = .primary
         navigationBar.isTranslucent = false
 
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

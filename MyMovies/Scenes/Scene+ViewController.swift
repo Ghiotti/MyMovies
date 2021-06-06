@@ -13,6 +13,13 @@ import AVKit
 /// This Scene extension creates the desired View Controller and binds it to its View Model
 extension Scene {
     func viewController() -> UIViewController {
-        return UIViewController()
+        switch self {
+        
+        /// Onboarding Flow
+        case .splash(let viewModel):
+            var viewController = SplashViewController()
+            viewController.bind(to: viewModel)
+            return viewController
+        }
     }
 }

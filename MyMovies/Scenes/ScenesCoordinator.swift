@@ -188,5 +188,7 @@ extension SceneCoordinator {
     
     /// Does the initial scene setup
     func setupInitialScene() {
+        let viewModel = SplashViewModel(coordinator: self)
+        transition(to: .splash(viewModel), type: .root(.none))
     }
 }

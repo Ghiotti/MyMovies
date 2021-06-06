@@ -7,6 +7,8 @@ target 'MyMovies' do
   pod 'SnapKit', '~> 5.0.1'
   pod 'Kingfisher', '~> 5.13'
   pod 'Bond', '~> 7.6.6'
+  pod 'IQKeyboardManagerSwift'
+  pod 'lottie-ios', '~> 3.2.2'
 
   target 'MyMoviesTests' do
     inherit! :search_paths
