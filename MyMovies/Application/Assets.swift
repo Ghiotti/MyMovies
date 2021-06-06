@@ -30,6 +30,17 @@ enum SplashAssets: String, AssetsProvider {
     var image: UIImage { UIImage(named: rawValue)! }
 }
 
+// Main Flow
+
+enum TabBarAssets: String, AssetsProvider {
+    case favorite = "TabBarFavorite"
+    case movie = "TabBarMovie"
+
+    var name: String { rawValue }
+    var image: UIImage { UIImage(named: rawValue)! }
+}
+
+
 // Home Flow
 
 //enum HomeAssets: String, AssetsProvider {

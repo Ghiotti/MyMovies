@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  MyMovies
+
+  Created by Franco Ghiotti on 6/6/21.
+  
+*/
+
+/* Common */
+
+"unexpected_error" = "Ocurrió un error, por favor intentarlo más tarde";
+
+/* Tab Bar */
+"movies" = "Pelis";
+"favorite" = "Favoritas";

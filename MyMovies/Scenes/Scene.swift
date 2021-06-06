@@ -15,4 +15,7 @@ enum Scene {
     
     /// Onboarding Flow
     case splash(SplashViewModel)
+    
+    /// Main Flow
+    case tabBar(TabBarViewModel)
 }

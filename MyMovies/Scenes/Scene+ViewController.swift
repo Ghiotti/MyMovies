@@ -20,6 +20,11 @@ extension Scene {
             var viewController = SplashViewController()
             viewController.bind(to: viewModel)
             return viewController
+            
+        case .tabBar(let viewModel):
+            var viewController = TabBarViewController()
+            viewController.bind(to: viewModel)
+            return NavigationViewController(rootViewController: viewController)
         }
     }
 }

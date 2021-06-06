@@ -22,6 +22,7 @@ final class SplashViewModel: BaseViewModel {
     // MARK: - Public Methods
 
     func goToHome() {
-        // GO TO HOME
+        let viewModel = TabBarViewModel(coordinator: coordinator)
+        coordinator.transition(to: .tabBar(viewModel), type: .root(.crossFade), completion: nil)
     }
 }

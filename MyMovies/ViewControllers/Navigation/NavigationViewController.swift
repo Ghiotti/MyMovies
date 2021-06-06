@@ -19,8 +19,6 @@ final class NavigationViewController: UINavigationController {
     // MARK: Private Methods
     
     private func addStyle() {
-        setNavigationBarHidden(true, animated: false)
-
         //navigationBar.backIndicatorImage = CommonAssets.backIcon.image
         //navigationBar.backIndicatorTransitionMaskImage = CommonAssets.backIcon.image
         navigationBar.tintColor = .white
