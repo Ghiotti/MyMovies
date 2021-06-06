@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,30 @@
 		A8ACCE0C266CE1D5006AD2F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8ACCE0A266CE1D5006AD2F7 /* LaunchScreen.storyboard */; };
 		A8ACCE17266CE1D5006AD2F7 /* MyMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE16266CE1D5006AD2F7 /* MyMoviesTests.swift */; };
 		A8ACCE22266CE1D5006AD2F7 /* MyMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE21266CE1D5006AD2F7 /* MyMoviesUITests.swift */; };
+		A8ACCE4A266CE552006AD2F7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE31266CE552006AD2F7 /* BaseTableViewCell.swift */; };
+		A8ACCE4B266CE552006AD2F7 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE32266CE552006AD2F7 /* SpinnerView.swift */; };
+		A8ACCE4C266CE552006AD2F7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE33266CE552006AD2F7 /* BaseView.swift */; };
+		A8ACCE4D266CE552006AD2F7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE35266CE552006AD2F7 /* APIClient.swift */; };
+		A8ACCE4F266CE552006AD2F7 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE38266CE552006AD2F7 /* APIEnvironment.swift */; };
+		A8ACCE50266CE552006AD2F7 /* APIErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE39266CE552006AD2F7 /* APIErrorHandler.swift */; };
+		A8ACCE51266CE552006AD2F7 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE3D266CE552006AD2F7 /* BaseTabBarController.swift */; };
+		A8ACCE52266CE552006AD2F7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE3E266CE552006AD2F7 /* BaseViewController.swift */; };
+		A8ACCE53266CE552006AD2F7 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE41266CE552006AD2F7 /* BaseViewModel.swift */; };
+		A8ACCE54266CE552006AD2F7 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE43266CE552006AD2F7 /* Assets.swift */; };
+		A8ACCE55266CE552006AD2F7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE44266CE552006AD2F7 /* Theme.swift */; };
+		A8ACCE56266CE552006AD2F7 /* Bindable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE46266CE552006AD2F7 /* Bindable+UIViewController.swift */; };
+		A8ACCE57266CE552006AD2F7 /* UIView+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE47266CE552006AD2F7 /* UIView+SnapKit.swift */; };
+		A8ACCE58266CE552006AD2F7 /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE48266CE552006AD2F7 /* UIView+ActivityIndicator.swift */; };
+		A8ACCE59266CE552006AD2F7 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE49266CE552006AD2F7 /* UIView+Shadow.swift */; };
+		A8ACCE61266CE70C006AD2F7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE5C266CE70C006AD2F7 /* Scene.swift */; };
+		A8ACCE62266CE70C006AD2F7 /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE5D266CE70C006AD2F7 /* Scene+ViewController.swift */; };
+		A8ACCE63266CE70C006AD2F7 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE5E266CE70C006AD2F7 /* SceneCoordinatorType.swift */; };
+		A8ACCE64266CE70C006AD2F7 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE5F266CE70C006AD2F7 /* SceneTransitionType.swift */; };
+		A8ACCE65266CE70C006AD2F7 /* ScenesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE60266CE70C006AD2F7 /* ScenesCoordinator.swift */; };
+		A8ACCE6B266CE9B6006AD2F7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE6A266CE9B6006AD2F7 /* NavigationViewController.swift */; };
+		A8ACCE6F266CEA2A006AD2F7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE6E266CEA2A006AD2F7 /* BaseResponse.swift */; };
+		A8ACCE71266CEA4B006AD2F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE70266CEA4B006AD2F7 /* Constants.swift */; };
+		A8ACCE73266CFA4C006AD2F7 /* String+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCE72266CFA4C006AD2F7 /* String+localize.swift */; };
 		C0A0DA32B2B3AC0C812272C0 /* Pods_MyMovies_MyMoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0F2D16308FDA5FDB980FF3 /* Pods_MyMovies_MyMoviesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +84,30 @@
 		A8ACCE1D266CE1D5006AD2F7 /* MyMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8ACCE21266CE1D5006AD2F7 /* MyMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoviesUITests.swift; sourceTree = "<group>"; };
 		A8ACCE23266CE1D5006AD2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8ACCE31266CE552006AD2F7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		A8ACCE32266CE552006AD2F7 /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		A8ACCE33266CE552006AD2F7 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A8ACCE35266CE552006AD2F7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A8ACCE38266CE552006AD2F7 /* APIEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		A8ACCE39266CE552006AD2F7 /* APIErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorHandler.swift; sourceTree = "<group>"; };
+		A8ACCE3D266CE552006AD2F7 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		A8ACCE3E266CE552006AD2F7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A8ACCE41266CE552006AD2F7 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A8ACCE43266CE552006AD2F7 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		A8ACCE44266CE552006AD2F7 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A8ACCE46266CE552006AD2F7 /* Bindable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bindable+UIViewController.swift"; sourceTree = "<group>"; };
+		A8ACCE47266CE552006AD2F7 /* UIView+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SnapKit.swift"; sourceTree = "<group>"; };
+		A8ACCE48266CE552006AD2F7 /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		A8ACCE49266CE552006AD2F7 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		A8ACCE5C266CE70C006AD2F7 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		A8ACCE5D266CE70C006AD2F7 /* Scene+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
+		A8ACCE5E266CE70C006AD2F7 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		A8ACCE5F266CE70C006AD2F7 /* SceneTransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
+		A8ACCE60266CE70C006AD2F7 /* ScenesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesCoordinator.swift; sourceTree = "<group>"; };
+		A8ACCE6A266CE9B6006AD2F7 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		A8ACCE6E266CEA2A006AD2F7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		A8ACCE70266CEA4B006AD2F7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A8ACCE72266CFA4C006AD2F7 /* String+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localize.swift"; sourceTree = "<group>"; };
 		BCBB393651A54307891A5A45 /* Pods-MyMovies-MyMoviesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovies-MyMoviesUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyMovies-MyMoviesUITests/Pods-MyMovies-MyMoviesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC1DDA334B596FA3BD6E0CE /* Pods-MyMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoviesTests.release.xcconfig"; path = "Target Support Files/Pods-MyMoviesTests/Pods-MyMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F15C470715A357EF7A1CFEAD /* Pods_MyMoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +151,6 @@
 				8EB17C71B14B92BD093DC256 /* Pods-MyMoviesTests.debug.xcconfig */,
 				CDC1DDA334B596FA3BD6E0CE /* Pods-MyMoviesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,7 +189,14 @@
 		A8ACCDFB266CE1D3006AD2F7 /* MyMovies */ = {
 			isa = PBXGroup;
 			children = (
-				A8ACCDFC266CE1D3006AD2F7 /* AppDelegate.swift */,
+				A8ACCE6C266CEA0B006AD2F7 /* Models */,
+				A8ACCE42266CE552006AD2F7 /* Application */,
+				A8ACCE3B266CE552006AD2F7 /* ViewControllers */,
+				A8ACCE3F266CE552006AD2F7 /* ViewModels */,
+				A8ACCE2F266CE552006AD2F7 /* Views */,
+				A8ACCE5A266CE699006AD2F7 /* Utils */,
+				A8ACCE5B266CE70C006AD2F7 /* Scenes */,
+				A8ACCE34266CE552006AD2F7 /* Networking */,
 				A8ACCDFE266CE1D3006AD2F7 /* SceneDelegate.swift */,
 				A8ACCE00266CE1D3006AD2F7 /* ViewController.swift */,
 				A8ACCE02266CE1D3006AD2F7 /* Main.storyboard */,
@@ -170,6 +224,151 @@
 				A8ACCE23266CE1D5006AD2F7 /* Info.plist */,
 			);
 			path = MyMoviesUITests;
+			sourceTree = "<group>";
+		};
+		A8ACCE2F266CE552006AD2F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE30266CE552006AD2F7 /* Base */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8ACCE30266CE552006AD2F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE31266CE552006AD2F7 /* BaseTableViewCell.swift */,
+				A8ACCE32266CE552006AD2F7 /* SpinnerView.swift */,
+				A8ACCE33266CE552006AD2F7 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8ACCE34266CE552006AD2F7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE35266CE552006AD2F7 /* APIClient.swift */,
+				A8ACCE37266CE552006AD2F7 /* Environment */,
+				A8ACCE39266CE552006AD2F7 /* APIErrorHandler.swift */,
+				A8ACCE3A266CE552006AD2F7 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A8ACCE37266CE552006AD2F7 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE38266CE552006AD2F7 /* APIEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		A8ACCE3A266CE552006AD2F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A8ACCE3B266CE552006AD2F7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE69266CE9B6006AD2F7 /* Navigation */,
+				A8ACCE3C266CE552006AD2F7 /* Base */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8ACCE3C266CE552006AD2F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE3D266CE552006AD2F7 /* BaseTabBarController.swift */,
+				A8ACCE3E266CE552006AD2F7 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8ACCE3F266CE552006AD2F7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE40266CE552006AD2F7 /* Base */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A8ACCE40266CE552006AD2F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE41266CE552006AD2F7 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8ACCE42266CE552006AD2F7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCDFC266CE1D3006AD2F7 /* AppDelegate.swift */,
+				A8ACCE43266CE552006AD2F7 /* Assets.swift */,
+				A8ACCE44266CE552006AD2F7 /* Theme.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A8ACCE45266CE552006AD2F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE46266CE552006AD2F7 /* Bindable+UIViewController.swift */,
+				A8ACCE47266CE552006AD2F7 /* UIView+SnapKit.swift */,
+				A8ACCE48266CE552006AD2F7 /* UIView+ActivityIndicator.swift */,
+				A8ACCE49266CE552006AD2F7 /* UIView+Shadow.swift */,
+				A8ACCE72266CFA4C006AD2F7 /* String+localize.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8ACCE5A266CE699006AD2F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE45266CE552006AD2F7 /* Extensions */,
+				A8ACCE70266CEA4B006AD2F7 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A8ACCE5B266CE70C006AD2F7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE5C266CE70C006AD2F7 /* Scene.swift */,
+				A8ACCE5D266CE70C006AD2F7 /* Scene+ViewController.swift */,
+				A8ACCE5E266CE70C006AD2F7 /* SceneCoordinatorType.swift */,
+				A8ACCE5F266CE70C006AD2F7 /* SceneTransitionType.swift */,
+				A8ACCE60266CE70C006AD2F7 /* ScenesCoordinator.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A8ACCE69266CE9B6006AD2F7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE6A266CE9B6006AD2F7 /* NavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A8ACCE6C266CEA0B006AD2F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE6D266CEA17006AD2F7 /* Base */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8ACCE6D266CEA17006AD2F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACCE6E266CEA2A006AD2F7 /* BaseResponse.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,10 +609,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8ACCE52266CE552006AD2F7 /* BaseViewController.swift in Sources */,
 				A8ACCE01266CE1D3006AD2F7 /* ViewController.swift in Sources */,
+				A8ACCE64266CE70C006AD2F7 /* SceneTransitionType.swift in Sources */,
+				A8ACCE6B266CE9B6006AD2F7 /* NavigationViewController.swift in Sources */,
 				A8ACCDFD266CE1D3006AD2F7 /* AppDelegate.swift in Sources */,
+				A8ACCE53266CE552006AD2F7 /* BaseViewModel.swift in Sources */,
 				A8ACCE07266CE1D3006AD2F7 /* MyMovies.xcdatamodeld in Sources */,
+				A8ACCE4D266CE552006AD2F7 /* APIClient.swift in Sources */,
+				A8ACCE4A266CE552006AD2F7 /* BaseTableViewCell.swift in Sources */,
+				A8ACCE63266CE70C006AD2F7 /* SceneCoordinatorType.swift in Sources */,
+				A8ACCE4C266CE552006AD2F7 /* BaseView.swift in Sources */,
+				A8ACCE54266CE552006AD2F7 /* Assets.swift in Sources */,
+				A8ACCE55266CE552006AD2F7 /* Theme.swift in Sources */,
+				A8ACCE58266CE552006AD2F7 /* UIView+ActivityIndicator.swift in Sources */,
+				A8ACCE4B266CE552006AD2F7 /* SpinnerView.swift in Sources */,
+				A8ACCE61266CE70C006AD2F7 /* Scene.swift in Sources */,
+				A8ACCE65266CE70C006AD2F7 /* ScenesCoordinator.swift in Sources */,
+				A8ACCE73266CFA4C006AD2F7 /* String+localize.swift in Sources */,
+				A8ACCE51266CE552006AD2F7 /* BaseTabBarController.swift in Sources */,
+				A8ACCE57266CE552006AD2F7 /* UIView+SnapKit.swift in Sources */,
+				A8ACCE62266CE70C006AD2F7 /* Scene+ViewController.swift in Sources */,
+				A8ACCE4F266CE552006AD2F7 /* APIEnvironment.swift in Sources */,
+				A8ACCE59266CE552006AD2F7 /* UIView+Shadow.swift in Sources */,
+				A8ACCE56266CE552006AD2F7 /* Bindable+UIViewController.swift in Sources */,
+				A8ACCE50266CE552006AD2F7 /* APIErrorHandler.swift in Sources */,
 				A8ACCDFF266CE1D3006AD2F7 /* SceneDelegate.swift in Sources */,
+				A8ACCE6F266CEA2A006AD2F7 /* BaseResponse.swift in Sources */,
+				A8ACCE71266CEA4B006AD2F7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
