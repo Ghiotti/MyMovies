@@ -16,6 +16,7 @@ struct Movie: Decodable {
     var movieId: Int?
     var movieName: String?
     var movieVote: Double?
+    var isFavorite = false
 
     enum CodingKeys: String, CodingKey {
         case posterUrl = "poster_path"

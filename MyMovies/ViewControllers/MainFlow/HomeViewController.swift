@@ -15,8 +15,10 @@ class HomeViewController: BaseViewController {
     private let cellIdentifier = String(describing: MovieCell.self)
     var viewModel: HomeViewModel!
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        moviesTableView.reloadData()
     }
     
     override func updateCoordinator() { }
@@ -59,6 +61,11 @@ extension HomeViewController: Bindable {
             guard let movieCell = weakSelf.moviesTableView.dequeueReusableCell(withIdentifier: weakSelf.cellIdentifier) as? MovieCell else {
                 return UITableViewCell()
             }
+            
+            movieCell.favoriteView.reactive.tapGesture().observeNext { _ in
+                weakSelf.viewModel.markAsFavorite(movieNumber: indexPath.row)
+                movieCell.markAsFavorite()
+            }.dispose(in: weakSelf.disposeBag)
             
             weakSelf.viewModel.checkPagination(movieNumber: indexPath.row)
             movieCell.setUp(withMovie: movies[indexPath.row])

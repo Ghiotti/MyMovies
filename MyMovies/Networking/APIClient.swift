@@ -13,18 +13,18 @@ class APICLient {
         endpoint: String,
         parameters: [String: Any]? = nil,
         environment: EnvironmentDelegate? = nil,
-        completion:@escaping (_ entity: T?, _ error: Error?) -> Void) {
-        createRequest(
-            endpoint: endpoint,
-            method: .get,
-            parameters: parameters,
-            encoding: URLEncoding.default,
-            environment: environment)
-            .responseDecodable(of: T.self) { (response) in
-                APIErrorHandler().validateResponse(response, completion: { (entity, error) in
-                    completion(entity, error)
-                })
-            }
+        completion:@escaping (_ entity: T?, _ error: Error?) -> Void) -> DataRequest {
+         return createRequest(
+                endpoint: endpoint,
+                method: .get,
+                parameters: parameters,
+                encoding: URLEncoding.default,
+                environment: environment)
+                .responseDecodable(of: T.self) { (response) in
+                    APIErrorHandler().validateResponse(response, completion: { (entity, error) in
+                        completion(entity, error)
+                    })
+                }
     }
     
     func createRequest(

@@ -59,6 +59,7 @@
 		A8ACCEA6266D60F5006AD2F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCEA5266D60F5006AD2F7 /* NetworkManager.swift */; };
 		A8ACCEA9266D6110006AD2F7 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCEA8266D6110006AD2F7 /* MovieService.swift */; };
 		A8ACCEAB266D6A58006AD2F7 /* UIImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCEAA266D6A58006AD2F7 /* UIImage+Kingfisher.swift */; };
+		A8ACCEAD266D878F006AD2F7 /* SearchMoviewByTitleParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACCEAC266D878F006AD2F7 /* SearchMoviewByTitleParams.swift */; };
 		C0A0DA32B2B3AC0C812272C0 /* Pods_MyMovies_MyMoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0F2D16308FDA5FDB980FF3 /* Pods_MyMovies_MyMoviesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		A8ACCEA5266D60F5006AD2F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A8ACCEA8266D6110006AD2F7 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		A8ACCEAA266D6A58006AD2F7 /* UIImage+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Kingfisher.swift"; sourceTree = "<group>"; };
+		A8ACCEAC266D878F006AD2F7 /* SearchMoviewByTitleParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviewByTitleParams.swift; sourceTree = "<group>"; };
 		BCBB393651A54307891A5A45 /* Pods-MyMovies-MyMoviesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovies-MyMoviesUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyMovies-MyMoviesUITests/Pods-MyMovies-MyMoviesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC1DDA334B596FA3BD6E0CE /* Pods-MyMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoviesTests.release.xcconfig"; path = "Target Support Files/Pods-MyMoviesTests/Pods-MyMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F15C470715A357EF7A1CFEAD /* Pods_MyMoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -475,6 +477,7 @@
 			children = (
 				A8ACCE98266D4D72006AD2F7 /* MovieResponse.swift */,
 				A8ACCE9B266D4D87006AD2F7 /* Movie.swift */,
+				A8ACCEAC266D878F006AD2F7 /* SearchMoviewByTitleParams.swift */,
 			);
 			path = MovieFlow;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 				A8ACCE58266CE552006AD2F7 /* UIView+ActivityIndicator.swift in Sources */,
 				A8ACCEA6266D60F5006AD2F7 /* NetworkManager.swift in Sources */,
 				A8ACCEA4266D5C53006AD2F7 /* MovieCell.swift in Sources */,
+				A8ACCEAD266D878F006AD2F7 /* SearchMoviewByTitleParams.swift in Sources */,
 				A8ACCE79266D0203006AD2F7 /* SplashViewModel.swift in Sources */,
 				A8ACCE4B266CE552006AD2F7 /* SpinnerView.swift in Sources */,
 				A8ACCE61266CE70C006AD2F7 /* Scene.swift in Sources */,

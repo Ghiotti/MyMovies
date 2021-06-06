@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Lottie
 
 class MovieCell: BaseTableViewCell {
     
@@ -17,7 +18,7 @@ class MovieCell: BaseTableViewCell {
     private lazy var releaseDate = UILabel(frame: .zero)
     private lazy var movieInfoStackView = UIStackView(frame: .zero)
     
-    private lazy var favoriteView = UIView(frame: .zero)
+    lazy var favoriteView = UIImageView(frame: .zero)
     
     private lazy var mainStackView = UIStackView(frame: .zero)
 
@@ -58,6 +59,7 @@ class MovieCell: BaseTableViewCell {
     }
     
     override func addConfigurations() {
+        selectionStyle = .none
         movieTitle.numberOfLines = 2
         
         movieImageView.contentMode = .scaleAspectFit
@@ -68,6 +70,11 @@ class MovieCell: BaseTableViewCell {
         movieInfoStackView.axis = .vertical
         movieInfoStackView.spacing = 5
         movieInfoStackView.distribution = .equalCentering
+        
+        favoriteView.image = HomeAssets.favoriteMovie.image
+        favoriteView.tintColor = .systemGroupedBackground
+        favoriteView.isUserInteractionEnabled = true
+        favoriteView.contentMode = .scaleAspectFit
     }
     
     override func addStyle() {
@@ -83,7 +90,13 @@ class MovieCell: BaseTableViewCell {
         releaseDate.text = movie.releaseDate
 
         if let movieVote = movie.movieVote {
-            movieCalification.text = "Calification: \(movie.movieVote)/10"
+            movieCalification.text = "Calification: \(movieVote)/10"
         }
+        
+        favoriteView.tintColor = movie.isFavorite ? .red : .systemGroupedBackground
+    }
+    
+    func markAsFavorite() {
+        favoriteView.tintColor = .red
     }
 }

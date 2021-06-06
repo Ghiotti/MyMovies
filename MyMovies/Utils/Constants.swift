@@ -21,6 +21,7 @@ struct Constants {
 
     struct Endpoints {
         static let mostPopularsMovies = "movie/popular"
+        static let searchByTitle = "search/movie"
     }
         
     struct ReuseIdentifiers {
@@ -28,6 +29,7 @@ struct Constants {
     
     struct Lottie {
         static let splash = "SplashLottieAnimation"
+        static let favorite = "FavoriteAnimation"
     }
     
     static let defaultCornerRadius: Float = 5

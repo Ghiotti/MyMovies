@@ -35,6 +35,13 @@ enum SplashAssets: String, AssetsProvider {
 enum TabBarAssets: String, AssetsProvider {
     case favorite = "TabBarFavorite"
     case movie = "TabBarMovie"
+    
+    var name: String { rawValue }
+    var image: UIImage { UIImage(named: rawValue)! }
+}
+
+enum HomeAssets: String, AssetsProvider {
+    case favoriteMovie = "HomeFavorite"
 
     var name: String { rawValue }
     var image: UIImage { UIImage(named: rawValue)! }

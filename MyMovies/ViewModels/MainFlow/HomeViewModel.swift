@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 import Bond
 
 class HomeViewModel: BaseViewModel {
@@ -17,6 +18,8 @@ class HomeViewModel: BaseViewModel {
     
     private var homeCurrentPage = 1
     private var isLoading = false
+    private var currentSearch: DataRequest?
+    private var isTextSearch = false
 
     // MARK: Init
     
@@ -29,24 +32,42 @@ class HomeViewModel: BaseViewModel {
     func searchMovie(fromName name: String?) {
         guard let movieName = name else {
             movieToShow.value = mostPopularsMovies.value
-
+            isTextSearch = false
+            
             return
         }
         
         if movieName.isEmpty {
             movieToShow.value = mostPopularsMovies.value
+            isTextSearch = false
             
             return
         }
         
-        // search movie
+        isTextSearch = true
+        currentSearch?.cancel()
+        
+        currentSearch = movieService.fetchMovirByTitle(title: movieName, completion: { movies, _ in
+            guard let movies = movies?.results else {
+                self.movieToShow.value = []
+                
+                return
+            }
+            
+            self.movieToShow.value = movies
+        })
     }
     
     func checkPagination(movieNumber: Int) {
+        if isTextSearch { return }
         if movieNumber == movieToShow.value.count - 2 {
             homeCurrentPage += 1
             fetchMostPopularsMoviews()
         }
+    }
+    
+    func markAsFavorite(movieNumber: Int) {
+        movieToShow.value[movieNumber].isFavorite = true
     }
 
     // MARK: Private Methods

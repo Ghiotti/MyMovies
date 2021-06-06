@@ -39,7 +39,7 @@ class SplashViewController: BaseViewController {
     
     private func setUpAnimation() {
         animationView.contentMode = .scaleAspectFit
-        animationView.animationSpeed = 0.5
+        animationView.animationSpeed = 1
         animationView.play { [weak self] _ in
             self?.viewModel.goToHome()
         }
