@@ -18,16 +18,43 @@ class MyMoviesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testMarkAsFavorite() throws {
+        // given
+        let movies = [Movie(), Movie(), Movie(), Movie(), Movie()]
+        let viewmodel = HomeViewModel(coordinator: nil, movieService: NetworkManager())
+        viewmodel.movieToShow.value = movies
+    
+        // when
+        viewmodel.markAsFavorite(movieNumber: 2)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        // then
+        XCTAssertEqual(viewmodel.movieToShow.value[2].isFavorite, true)
     }
+    
+    func testUnmarkAsFavorite() throws {
+        // given
+        let movies = [Movie(), Movie(), Movie(), Movie(), Movie()]
+        let viewmodel = HomeViewModel(coordinator: nil, movieService: NetworkManager())
+        viewmodel.movieToShow.value = movies
+    
+        // when
+        viewmodel.markAsFavorite(movieNumber: 2)
+        viewmodel.markAsFavorite(movieNumber: 2)
 
+        // then
+        XCTAssertEqual(viewmodel.movieToShow.value[2].isFavorite, false)
+    }
+    
+    func testRemoveFromFavorite() {
+        // given
+        let movies = [Movie(), Movie(), Movie(), Movie(), Movie()]
+        let viewmodel = FavoriteMoviesViewModel(coordinator: nil)
+        viewmodel.favoritesMovies.value = movies
+
+        //when
+        viewmodel.removeFromFavorite(movieRow: 2)
+        
+        //then
+        XCTAssertEqual(viewmodel.favoritesMovies.value.count, 4)
+    }
 }

@@ -8,7 +8,11 @@
 
 /* Common */
 "unexpected_error" = "Ocurrió un error, por favor intentarlo más tarde";
+"accept" = "Aceptar";
 
 /* Tab Bar */
 "movies" = "Pelis";
 "favorite" = "Favoritas";
+
+/* Tab Bar */
+"home_filter" = "Busca tu pelicula favorita";
