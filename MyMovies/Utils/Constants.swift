@@ -32,6 +32,10 @@ struct Constants {
         static let favorite = "FavoriteAnimation"
     }
     
+    struct UserDefaults {
+        static let favoriteKey = "favoriteKey"
+    }
+    
     static let defaultCornerRadius: Float = 5
     static let defaultAnimationDuration = 0.3
 }

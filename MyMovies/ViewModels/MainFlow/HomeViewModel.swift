@@ -21,7 +21,7 @@ class HomeViewModel: BaseViewModel {
     private var currentSearch: DataRequest?
     private var isTextSearch = false
 
-    // MARK: Init
+    // MARK: - Init
     
     init(coordinator: SceneCoordinatorType?, movieService: MovieServiceDelegate) {
         self.movieService = movieService
@@ -29,10 +29,13 @@ class HomeViewModel: BaseViewModel {
         fetchMostPopularsMoviews()
     }
     
+    // MARK: - Public Methods
+
     func searchMovie(fromName name: String?) {
         guard let movieName = name else {
             movieToShow.value = mostPopularsMovies.value
             isTextSearch = false
+            procesMovies()
             
             return
         }
@@ -40,6 +43,7 @@ class HomeViewModel: BaseViewModel {
         if movieName.isEmpty {
             movieToShow.value = mostPopularsMovies.value
             isTextSearch = false
+            procesMovies()
             
             return
         }
@@ -55,6 +59,7 @@ class HomeViewModel: BaseViewModel {
             }
             
             self.movieToShow.value = movies
+            self.procesMovies()
         })
     }
     
@@ -66,8 +71,54 @@ class HomeViewModel: BaseViewModel {
         }
     }
     
+    
+    // TODO: We can use Core Data to save the favorites movies
     func markAsFavorite(movieNumber: Int) {
-        movieToShow.value[movieNumber].isFavorite = true
+        movieToShow.value[movieNumber].isFavorite = !(movieToShow.value[movieNumber].isFavorite ?? false)
+ 
+        guard var favoritesMovies = Session.shared.favoritesMovies else {
+            Session.shared.favoritesMovies = [movieToShow.value[movieNumber]]
+
+            return
+        }
+        
+        if favoritesMovies.isEmpty && movieToShow.value[movieNumber].isFavorite ?? false {
+            Session.shared.favoritesMovies = [movieToShow.value[movieNumber]]
+
+            return
+        }
+        
+        let index = favoritesMovies.firstIndex { movie in
+            return movie.movieId == movieToShow.value[movieNumber].movieId
+        }
+        
+        if let movieIndex = index?.asSectionDataIndexPath.row {
+            favoritesMovies.remove(at: movieIndex)
+            Session.shared.favoritesMovies = favoritesMovies
+        } else {
+            favoritesMovies.append(movieToShow.value[movieNumber])
+            Session.shared.favoritesMovies = favoritesMovies
+        }
+    }
+    
+    func procesMovies() {
+        guard let favoriteMovies = Session.shared.favoritesMovies else {
+            return
+        }
+        
+        for (index, _) in movieToShow.value.enumerated() {
+            movieToShow.value[index].isFavorite = false
+        }
+        
+        for favMovie in favoriteMovies {
+            let index = movieToShow.value.firstIndex { movie in
+                return movie.movieId == favMovie.movieId
+            }
+            
+            if let index = index?.asSectionDataIndexPath.row {
+                movieToShow.value[index].isFavorite = true
+            }
+        }
     }
 
     // MARK: Private Methods
@@ -91,6 +142,7 @@ class HomeViewModel: BaseViewModel {
             
             self.mostPopularsMovies.value = self.mostPopularsMovies.value + movies
             self.movieToShow.value = self.movieToShow.value + movies
+            self.procesMovies()
             self.isLoading = false
         }
     }

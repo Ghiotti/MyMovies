@@ -29,6 +29,8 @@ class MovieCell: BaseTableViewCell {
         releaseDate.text = ""
     }
     
+    // MARK: - BaseTableViewCell
+    
     override func addSubviews() {
         contentView.addSubview(mainStackView)
         
@@ -83,6 +85,8 @@ class MovieCell: BaseTableViewCell {
         releaseDate.font = UIFont.italicSystemFont(ofSize: 12)
     }
     
+    // MARK: - PublicMethods
+    
     func setUp(withMovie movie: Movie) {
         movieImageView.setImage(fromUrlString: movie.posterUrl ?? "", placeHolder: UIImage())
         
@@ -93,10 +97,6 @@ class MovieCell: BaseTableViewCell {
             movieCalification.text = "Calification: \(movieVote)/10"
         }
         
-        favoriteView.tintColor = movie.isFavorite ? .red : .systemGroupedBackground
-    }
-    
-    func markAsFavorite() {
-        favoriteView.tintColor = .red
+        favoriteView.tintColor = movie.isFavorite ?? false ? .red : .systemGroupedBackground
     }
 }

@@ -6,12 +6,26 @@
 //
 
 import Foundation
+import Bond
 
 class FavoriteMoviesViewModel: BaseViewModel {
         
-    // MARK: Init
+    var favoritesMovies: Observable<[Movie]> = Observable([])
+    
+    // MARK: - Init
     
     init(coordinator: SceneCoordinatorType?) {
         super.init(coordinator: coordinator)
+    }
+    
+    // MARK: - Public Methods
+    
+    func getFavoritesMovies() {
+        favoritesMovies.value = Session.shared.favoritesMovies ?? []
+    }
+    
+    func removeFromFavorite(movieRow: Int) {
+        favoritesMovies.value.remove(at: movieRow)
+        Session.shared.favoritesMovies = favoritesMovies.value
     }
 }

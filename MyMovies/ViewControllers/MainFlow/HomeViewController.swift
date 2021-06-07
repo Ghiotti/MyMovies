@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        viewModel.procesMovies()
         moviesTableView.reloadData()
     }
     
@@ -64,7 +65,6 @@ extension HomeViewController: Bindable {
             
             movieCell.favoriteView.reactive.tapGesture().observeNext { _ in
                 weakSelf.viewModel.markAsFavorite(movieNumber: indexPath.row)
-                movieCell.markAsFavorite()
             }.dispose(in: weakSelf.disposeBag)
             
             weakSelf.viewModel.checkPagination(movieNumber: indexPath.row)

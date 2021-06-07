@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie: Decodable {
+struct Movie: Decodable, Encodable {
     
     var posterUrl: String?
     var isForAdult: Bool?
@@ -16,7 +16,7 @@ struct Movie: Decodable {
     var movieId: Int?
     var movieName: String?
     var movieVote: Double?
-    var isFavorite = false
+    var isFavorite: Bool? = false
 
     enum CodingKeys: String, CodingKey {
         case posterUrl = "poster_path"
@@ -26,6 +26,7 @@ struct Movie: Decodable {
         case movieId = "id"
         case movieName = "title"
         case movieVote = "vote_average"
+        case isFavorite
     }
 
 }
